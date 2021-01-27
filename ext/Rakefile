@@ -35,7 +35,7 @@ file 'Makefile' do
 end
 
 task :build => [ 'Makefile', :wrappers ] do
-  sh 'make'
+  sh 'make V=1 | tee /tmp/zookeeper-build.out'
 end
 
 
